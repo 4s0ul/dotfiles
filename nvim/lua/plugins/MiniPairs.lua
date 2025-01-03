@@ -1,1 +1,1 @@
-return {{ 'echasnovski/mini.Pairs', version = false }}
+return {{ 'echasnovski/mini.pairs', version = false }}
