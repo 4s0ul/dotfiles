@@ -20,21 +20,20 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.o.swapfile = false
 vim.o.clipboard = "unnamedplus"
-
 vim.o.smartcase = true
 vim.o.ignorecase = true
-
 vim.o.splitright = true
-
 vim.o.number = true
 vim.o.showmode = false
+vim.o.scrolloff = 5
+vim.o.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+vim.o.imsearch = 0
+vim.o.iminsert = 0
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.keymap.set("n", "<leader>w", "<C-w>")
-vim.keymap.set("n", "<leader>J", ":bp<CR>")
-vim.keymap.set("n", "<leader>K", ":bn<CR>")
 
 -- Setup lazy.nvim
 require("lazy").setup({
