@@ -1,7 +1,6 @@
 return {                                                                                                                      
    {                                                                                                                           
      "neovim/nvim-lspconfig",                                                                                                  
-     lazy = false,                                                                                                             
      config = function()                                                                                                       
        local lspconfig = require("lspconfig")
        vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
