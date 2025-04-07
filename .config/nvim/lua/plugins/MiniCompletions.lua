@@ -1,1 +1,1 @@
-return {{ 'echasnovski/mini.completion', version = false }}
+return {{'echasnovski/mini.completion', version = false}}

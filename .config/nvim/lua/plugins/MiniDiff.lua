@@ -1,1 +1,1 @@
-return {{ 'echasnovski/mini.diff', version = false }}
+return {{'echasnovski/mini.diff', version = false}}

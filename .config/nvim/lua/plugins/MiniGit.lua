@@ -1,1 +1,1 @@
-return {{ 'echasnovski/mini-git', version = false }}
+return {{'echasnovski/mini-git', version = false}}
