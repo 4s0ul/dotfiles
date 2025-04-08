@@ -59,16 +59,15 @@ tooltip {
     transition: all 0.1s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
-#tray {
-    background: @main-bg;
-    padding: 0px 5px;
-}
-
 #clock {
-    padding: 0px 5px;
+    padding: 0px 10px;
 }
 
-#network {
+#language {
+    padding: 0px 5px 0px 10px;
+}
+
+#backlight {
     padding: 0px 5px;
 }
 
@@ -76,14 +75,15 @@ tooltip {
     padding: 0px 5px;
 }
 
-#language {
-    padding: 0px 5px;
-}
-
-#backlight {
+#network {
     padding: 0px 5px;
 }
 
 #battery {
-    padding: 0px 5px;
+    padding: 0px 10px 0px 5px;
+}
+
+#tray {
+    background: @main-bg;
+    padding: 0px 10px 0px 0px;
 }
