@@ -1,6 +1,10 @@
 {
   "layer": "top",
   "position": "top",
+  "margin-top": 5,
+  "margin-bottom": 0,
+  "margin-left": 10,
+  "margin-right": 10,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["hyprland/language", "backlight", "pulseaudio", "network", "battery", "tray"],
@@ -43,7 +47,7 @@
   },
  
   "hyprland/language": {
-    "format": "{}",
+    "format": " {}",
     "format-en": "US",
     "format-ru": "RU"
   },
