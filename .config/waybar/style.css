@@ -59,10 +59,6 @@ tooltip {
     transition: all 0.1s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
-#language,
-#clock,
-#network,
-#pulseaudio,
 #tray {
     background: @main-bg;
     padding: 0px 10px;
