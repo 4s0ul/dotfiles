@@ -3,6 +3,8 @@ return {
         'MeanderingProgrammer/render-markdown.nvim',
         ---@module 'render-markdown'
         ---@type render.md.UserConfig
-	opts = {completions = {lsp = {enabled = true}}},
+        opts = {completions = {lsp = {enabled = true}}},
+        lazy = true,
+        event = {"BufEnter *.md"}
     }
 }

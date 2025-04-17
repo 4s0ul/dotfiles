@@ -2,6 +2,8 @@ return {
     {
         "echasnovski/mini.pairs",
         version = false,
-	opts = {},
+        opts = {},
+        lazy = true,
+        event = "InsertEnter"
     }
 }

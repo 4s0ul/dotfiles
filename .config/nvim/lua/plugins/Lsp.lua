@@ -1,33 +1,28 @@
 return {
-    {
-        "williamboman/mason.nvim",
-	opts = {},
-    },
-
-    {
+    {"williamboman/mason.nvim", opts = {}, lazy = true}, {
         "williamboman/mason-lspconfig.nvim",
-	opts = {ensure_installed = { "basedpyright", "marksman" },},
-    },
-
-    {
+        opts = {ensure_installed = {"basedpyright", "marksman"}},
+        lazy = true
+    }, {
         "neovim/nvim-lspconfig",
+        dependencies = {
+            "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim"
+        },
+        opts = {},
+        keys = {
+            {"K", vim.lsp.buf.hover, desc = "LSP Hover"},
+            {"gd", vim.lsp.buf.definition, desc = "LSP Go to Definition"},
+            {"gD", vim.lsp.buf.declaration, desc = "LSP Go to Declaration"},
+            {"grn", vim.lsp.buf.rename, desc = "LSP Rename"}
+        },
         config = function()
-
             require("lspconfig").basedpyright.setup({
-                settings = {
-                    basedpyright = {
-                        typeCheckingMode = "standard",
-                    },
-                },
+                settings = {basedpyright = {typeCheckingMode = "standard"}}
             })
 
             require("lspconfig").marksman.setup({})
-
-            -- LSP keymaps
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
-            vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP Go to Definition" })
-            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "LSP Go to Declaration" })
-            vim.keymap.set("n", "grn", vim.lsp.buf.rename, { desc = "LSP Rename" })
         end,
-    },
+        lazy = true,
+        event = "VeryLazy"
+    }
 }

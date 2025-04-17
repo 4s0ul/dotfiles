@@ -1,8 +1,9 @@
 return {
     {
         "echasnovski/mini-git",
-	name = "mini.git",
+        name = "mini.git",
         version = false,
-	opts = {},
+        opts = {},
+        lazy = false
     }
 }

@@ -2,6 +2,8 @@ return {
     {
         'echasnovski/mini.extra',
         version = false,
-	opts = {},
+        opts = {},
+        lazy = true,
+        event = "VeryLazy"
     }
 }
