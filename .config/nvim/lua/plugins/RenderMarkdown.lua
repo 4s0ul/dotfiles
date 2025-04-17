@@ -5,6 +5,6 @@ return {
         ---@type render.md.UserConfig
         opts = {completions = {lsp = {enabled = true}}},
         lazy = true,
-        event = {"BufEnter *.md"}
+        ft = "markdown",
     }
 }

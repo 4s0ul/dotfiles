@@ -23,6 +23,6 @@ return {
             require("lspconfig").marksman.setup({})
         end,
         lazy = true,
-        event = {"BufReadPre", "BufNewFile"}
+        ft = {"python", "markdown"},
     }
 }
