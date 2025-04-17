@@ -14,6 +14,7 @@ return {
         config = function(_, opts)
             require("nvim-treesitter.configs").setup(opts)
         end,
-        lazy = false
+        lazy = true,
+        ft = { "c", "lua", "vim", "vimdoc", "javascript", "html", "python", "markdown", "markdown_inline" },
     }
 }
