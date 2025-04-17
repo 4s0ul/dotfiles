@@ -23,7 +23,7 @@ return {
                 desc = "Pick Buffers"
             }, {
                 "<leader>r",
-                "<cmd>Pick lsp scope = 'references'<cr>",
+                '<cmd>Pick lsp scope="references"<cr>',
                 mode = "n",
                 desc = "Pick References"
             },
