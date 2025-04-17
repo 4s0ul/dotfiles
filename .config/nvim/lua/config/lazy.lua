@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
+vim.o.signcolumn = "yes"
 vim.o.swapfile = false
 vim.o.clipboard = "unnamedplus"
 vim.o.smartcase = true
@@ -32,6 +33,10 @@ vim.o.langmap =
     "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 vim.o.imsearch = 0
 vim.o.iminsert = 0
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
