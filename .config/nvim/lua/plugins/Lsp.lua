@@ -23,6 +23,6 @@ return {
             require("lspconfig").marksman.setup({})
         end,
         lazy = true,
-        event = "VeryLazy"
+        event = {"BufReadPre", "BufNewFile"}
     }
 }
