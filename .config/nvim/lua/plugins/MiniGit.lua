@@ -1,9 +1,8 @@
 return {
     {
         "echasnovski/mini-git",
+	name = "mini.git",
         version = false,
-	config = function()
-	    require("mini.git").setup()
-	end
+	opts = {},
     }
 }

@@ -1,26 +1,19 @@
 return {
     {
         "williamboman/mason.nvim",
-        config = function()
-            require("mason").setup()
-        end,
+	opts = {},
     },
 
     {
         "williamboman/mason-lspconfig.nvim",
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = { "basedpyright", "marksman" },
-            })
-        end,
+	opts = {ensure_installed = { "basedpyright", "marksman" },},
     },
 
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
 
-            lspconfig.basedpyright.setup({
+            require("lspconfig").basedpyright.setup({
                 settings = {
                     basedpyright = {
                         typeCheckingMode = "standard",
@@ -28,7 +21,7 @@ return {
                 },
             })
 
-            lspconfig.marksman.setup({})
+            require("lspconfig").marksman.setup({})
 
             -- LSP keymaps
             vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
