@@ -6,6 +6,9 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
 		opts = {
 			ensure_installed = {
 				"basedpyright",
@@ -15,10 +18,25 @@ return {
 		lazy = true,
 	},
 	{
+		"echasnovski/mini.snippets",
+		version = false,
+		opts = {},
+		lazy = true,
+	},
+	{
+		"echasnovski/mini.completion",
+		dependencies = {
+			"echasnovski/mini.snippets",
+		},
+		version = false,
+		opts = {},
+		lazy = true,
+	},
+	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
+			"echasnovski/mini.completion",
 		},
 		opts = {},
 		keys = {
