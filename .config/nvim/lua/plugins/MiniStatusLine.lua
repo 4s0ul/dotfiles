@@ -1,3 +1,3 @@
 return {
-    {"echasnovski/mini.statusline", version = false, opts = {}, lazy = false}
+	{ "echasnovski/mini.statusline", version = false, opts = {}, lazy = false },
 }

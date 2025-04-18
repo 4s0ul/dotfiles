@@ -1,9 +1,9 @@
 return {
-    {
-        "echasnovski/mini.completion",
-        version = false,
-        opts = {},
-        lazy = true,
-        event = "InsertEnter"
-    }
+	{
+		"echasnovski/mini.completion",
+		version = false,
+		opts = {},
+		lazy = true,
+		event = "InsertEnter",
+	},
 }

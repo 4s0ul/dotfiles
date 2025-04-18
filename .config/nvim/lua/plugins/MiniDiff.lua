@@ -1,1 +1,1 @@
-return {{"echasnovski/mini.diff", version = false, opts = {}, lazy = false}}
+return { { "echasnovski/mini.diff", version = false, opts = {}, lazy = false } }

@@ -1,9 +1,9 @@
 return {
-    {
-        'echasnovski/mini.extra',
-        version = false,
-        opts = {},
-        lazy = true,
-        event = "VeryLazy"
-    }
+	{
+		"echasnovski/mini.extra",
+		version = false,
+		opts = {},
+		lazy = true,
+		event = "VeryLazy",
+	},
 }
