@@ -40,10 +40,8 @@ return {
 		},
 		opts = {},
 		keys = {
-			{ "K", vim.lsp.buf.hover, desc = "LSP Hover" },
 			{ "gd", vim.lsp.buf.definition, desc = "LSP Go to Definition" },
 			{ "gD", vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
-			{ "grn", vim.lsp.buf.rename, desc = "LSP Rename" },
 		},
 		config = function()
 			local lspconfig = require("lspconfig")
