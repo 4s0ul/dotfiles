@@ -5,31 +5,31 @@ return {
 		opts = {},
 		keys = {
 			{
-				"<leader>f",
+				"<leader>ff",
 				"<cmd>Pick files<cr>",
 				mode = "n",
 				desc = "Pick Files",
 			},
 			{
-				"<leader>g",
+				"<leader>fg",
 				"<cmd>Pick grep_live<cr>",
 				mode = "n",
 				desc = "Pick Text",
 			},
 			{
-				"<leader>b",
+				"<leader>fb",
 				"<cmd>Pick buffers<cr>",
 				mode = "n",
 				desc = "Pick Buffers",
 			},
 			{
-				"<leader>r",
+				"<leader>fr",
 				'<cmd>Pick lsp scope="references"<cr>',
 				mode = "n",
 				desc = "Pick References",
 			},
 			{
-				"<leader>p",
+				"<leader>fp",
 				"<cmd>Pick resume<cr>",
 				mode = "n",
 				desc = "Pick Resume",
