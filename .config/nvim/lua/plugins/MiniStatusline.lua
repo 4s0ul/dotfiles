@@ -1,10 +1,5 @@
 return {
-	{
-		"echasnovski/mini.icons",
-		version = false,
-		opts = {},
-		lazy = true,
-	},
+	{ "echasnovski/mini.icons", version = false, opts = {}, lazy = true },
 	{
 		"echasnovski/mini-git",
 		name = "mini.git",
@@ -12,12 +7,7 @@ return {
 		opts = {},
 		lazy = true,
 	},
-	{
-		"echasnovski/mini.diff",
-		version = false,
-		opts = {},
-		lazy = true,
-	},
+	{ "echasnovski/mini.diff", version = false, opts = {}, lazy = true },
 	{
 		"echasnovski/mini.statusline",
 		dependencies = {

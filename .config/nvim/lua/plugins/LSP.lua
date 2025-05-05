@@ -1,33 +1,15 @@
 return {
-	{
-		"williamboman/mason.nvim",
-		opts = {},
-		lazy = true,
-	},
+	{ "williamboman/mason.nvim", opts = {}, lazy = true },
 	{
 		"williamboman/mason-lspconfig.nvim",
-		dependencies = {
-			"williamboman/mason.nvim",
-		},
-		opts = {
-			ensure_installed = {
-				"basedpyright",
-				"marksman",
-			},
-		},
+		dependencies = { "williamboman/mason.nvim" },
+		opts = { ensure_installed = { "basedpyright", "marksman" } },
 		lazy = true,
 	},
-	{
-		"echasnovski/mini.snippets",
-		version = false,
-		opts = {},
-		lazy = true,
-	},
+	{ "echasnovski/mini.snippets", version = false, opts = {}, lazy = true },
 	{
 		"echasnovski/mini.completion",
-		dependencies = {
-			"echasnovski/mini.snippets",
-		},
+		dependencies = { "echasnovski/mini.snippets" },
 		version = false,
 		opts = {},
 		lazy = true,
@@ -47,11 +29,7 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.basedpyright.setup({
-				settings = {
-					basedpyright = {
-						typeCheckingMode = "standard",
-					},
-				},
+				settings = { basedpyright = { typeCheckingMode = "standard" } },
 			})
 
 			lspconfig.marksman.setup({})
