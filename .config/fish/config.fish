@@ -37,5 +37,5 @@ if status is-interactive
     set fish_pager_color_progress 6c7086
     set fish_pager_color_prefix f5c2e7
     set fish_pager_color_completion cdd6f4
-    set fish_pager_color_description 6c7086   fzf_key_bindings
+    set fish_pager_color_description 6c7086
 end
