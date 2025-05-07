@@ -1,16 +1,24 @@
 return {
-	{ "williamboman/mason.nvim", opts = {}, lazy = true },
+	{
+		"williamboman/mason.nvim",
+		opts = {},
+		cmd = { "Mason" },
+		lazy = true,
+	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim" },
 		opts = { automatic_enable = false, ensure_installed = { "basedpyright", "marksman" } },
 		lazy = true,
 	},
-	{ "echasnovski/mini.snippets", version = false, opts = {}, lazy = true },
+	{
+		"echasnovski/mini.snippets",
+		opts = {},
+		lazy = true,
+	},
 	{
 		"echasnovski/mini.completion",
 		dependencies = { "echasnovski/mini.snippets" },
-		version = false,
 		opts = {},
 		lazy = true,
 	},
