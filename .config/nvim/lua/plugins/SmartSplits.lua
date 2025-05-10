@@ -1,7 +1,10 @@
 return {
 	{
 		"mrjones2014/smart-splits.nvim",
+		priority = 1,
 		build = "./kitty/install-kittens.bash",
+		opts = { at_edge = "stop", cursor_follows_swapped_bufs = true },
+		lazy = false,
 		keys = {
 			{
 				"<A-h>",
@@ -61,7 +64,5 @@ return {
 				desc = "Swap Right",
 			},
 		},
-		opts = { at_edge = "stop", cursor_follows_swapped_bufs = true },
-		lazy = false,
 	},
 }

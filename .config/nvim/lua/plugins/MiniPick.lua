@@ -2,6 +2,7 @@ return {
 	{
 		"echasnovski/mini.pick",
 		opts = {},
+		lazy = true,
 		keys = {
 			{
 				"<leader>ff",
@@ -34,6 +35,5 @@ return {
 				desc = "Pick Resume",
 			},
 		},
-		lazy = true,
 	},
 }

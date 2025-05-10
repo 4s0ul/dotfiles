@@ -2,8 +2,8 @@ return {
 	{
 		"williamboman/mason.nvim",
 		opts = {},
-		cmd = { "Mason" },
 		lazy = true,
+		cmd = { "Mason" },
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -29,10 +29,6 @@ return {
 			"echasnovski/mini.completion",
 		},
 		opts = {},
-		keys = {
-			{ "gd", vim.lsp.buf.definition, desc = "LSP Go to Definition" },
-			{ "gD", vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
-		},
 		config = function()
 			local lspconfig = require("lspconfig")
 
@@ -44,5 +40,9 @@ return {
 		end,
 		lazy = true,
 		ft = { "python", "markdown" },
+		keys = {
+			{ "gd", vim.lsp.buf.definition, desc = "LSP Go to Definition" },
+			{ "gD", vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
+		},
 	},
 }
