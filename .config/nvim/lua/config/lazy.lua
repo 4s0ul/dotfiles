@@ -46,6 +46,8 @@ vim.o.expandtab = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
