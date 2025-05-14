@@ -29,6 +29,18 @@ return {
 				desc = "Pick References",
 			},
 			{
+				"<leader>f'",
+				"<cmd>Pick marks<cr>",
+				mode = "n",
+				desc = "Pick marks",
+			},
+			{
+				'<leader>f"',
+				'<cmd>Pick registers<cr>',
+				mode = "n",
+				desc = "Pick registers",
+			},
+			{
 				"<leader>fp",
 				"<cmd>Pick resume<cr>",
 				mode = "n",
