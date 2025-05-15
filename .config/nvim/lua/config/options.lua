@@ -3,8 +3,13 @@ vim.o.signcolumn = "yes"
 vim.o.number = true
 vim.o.showmode = false
 
--- Swapfile
+-- Indentation
+vim.o.autoindent = true
+vim.o.smartindent = true
+
+-- Backup
 vim.o.swapfile = false
+vim.o.backup = false
 
 -- Scrolloff
 vim.o.scrolloff = 5
@@ -12,8 +17,9 @@ vim.o.scrolloff = 5
 -- Clipboard
 vim.o.clipboard = "unnamedplus"
 
--- Split
+-- Splits
 vim.o.splitright = true
+vim.o.splitbelow = true
 
 -- Search
 vim.o.smartcase = true
@@ -30,7 +36,3 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
-
--- Leader
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"

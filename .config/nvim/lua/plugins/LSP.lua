@@ -43,6 +43,7 @@ return {
 		keys = {
 			{ "gd", vim.lsp.buf.definition, desc = "LSP Go to Definition" },
 			{ "gD", vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
+            { "<leader>cd", vim.diagnostic.open_float,  desc = "Line Diagnostics" },
 		},
 	},
 }
