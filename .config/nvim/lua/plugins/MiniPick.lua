@@ -29,6 +29,12 @@ return {
 				desc = "Pick References",
 			},
 			{
+				"<leader>fs",
+				'<cmd>Pick lsp scope="document_symbol"<cr>',
+				mode = "n",
+				desc = "Pick Symbols",
+			},
+			{
 				"<leader>f'",
 				"<cmd>Pick marks<cr>",
 				mode = "n",
