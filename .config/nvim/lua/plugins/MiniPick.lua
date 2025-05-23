@@ -18,7 +18,7 @@ return {
 			},
 			{
 				"<leader>fb",
-				"<cmd>Pick buffers<cr>",
+				"<cmd>Pick buffers include_current=false<cr>",
 				mode = "n",
 				desc = "Pick Buffers",
 			},
