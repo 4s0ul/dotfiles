@@ -42,7 +42,7 @@ return {
 			},
 			{
 				'<leader>f"',
-				'<cmd>Pick registers<cr>',
+				"<cmd>Pick registers<cr>",
 				mode = "n",
 				desc = "Pick registers",
 			},
