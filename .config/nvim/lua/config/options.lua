@@ -14,9 +14,6 @@ vim.o.backup = false
 -- Scrolloff
 vim.o.scrolloff = 5
 
--- Clipboard
-vim.o.clipboard = "unnamedplus"
-
 -- Splits
 vim.o.splitright = true
 vim.o.splitbelow = true
