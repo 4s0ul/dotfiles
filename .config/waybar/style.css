@@ -9,7 +9,7 @@
     border-radius: 15px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 window#waybar {
@@ -59,23 +59,31 @@ tooltip {
     transition: all 0.1s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
-#tray {
-    background: @main-bg;
-    padding: 0px 10px;
-}
-
 #clock {
     padding: 0px 10px;
 }
 
-#network {
-    padding: 0px 10px;
+#language {
+    padding: 0px 5px 0px 10px;
+}
+
+#backlight {
+    padding: 0px 5px;
 }
 
 #pulseaudio {
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 
-#language {
-    padding: 0px 10px;
+#network {
+    padding: 0px 5px;
+}
+
+#battery {
+    padding: 0px 10px 0px 5px;
+}
+
+#tray {
+    background: @main-bg;
+    padding: 0px 10px 0px 0px;
 }

@@ -1,1 +1,8 @@
-return {{'echasnovski/mini.surround', version = false}}
+return {
+	{
+		"echasnovski/mini.surround",
+		opts = {},
+		lazy = true,
+		event = "VeryLazy",
+	},
+}

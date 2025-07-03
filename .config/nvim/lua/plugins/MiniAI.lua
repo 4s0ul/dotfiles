@@ -1,1 +1,8 @@
-return {{'echasnovski/mini.ai', version = false}}
+return {
+	{
+		"echasnovski/mini.ai",
+		opts = {},
+		lazy = true,
+		event = "VeryLazy",
+	},
+}

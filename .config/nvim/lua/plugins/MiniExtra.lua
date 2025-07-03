@@ -1,1 +1,8 @@
-return {{'echasnovski/mini.extra', version = false}}
+return {
+	{
+		"echasnovski/mini.extra",
+		opts = {},
+		lazy = true,
+		event = "VeryLazy",
+	},
+}
