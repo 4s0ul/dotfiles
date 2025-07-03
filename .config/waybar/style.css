@@ -67,20 +67,12 @@ tooltip {
     padding: 0px 5px 0px 10px;
 }
 
-#backlight {
-    padding: 0px 5px;
-}
-
 #pulseaudio {
     padding: 0px 5px;
 }
 
 #network {
     padding: 0px 5px;
-}
-
-#battery {
-    padding: 0px 10px 0px 5px;
 }
 
 #tray {

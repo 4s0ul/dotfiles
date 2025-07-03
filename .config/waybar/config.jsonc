@@ -20,6 +20,12 @@
     "interval": 1
   },
  
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "US",
+    "format-ru": "RU"
+  },
+ 
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 Muted",
@@ -32,12 +38,6 @@
     "format-wifi": "󰖩 {essid} ({signalStrength}%)",
     "format-ethernet": "󰈀 {ipaddr}/{cidr}",
     "format-disconnected": "󰤮 Disconnected"
-  },
- 
-  "hyprland/language": {
-    "format": " {}",
-    "format-en": "US",
-    "format-ru": "RU"
   },
   
   "tray": {
