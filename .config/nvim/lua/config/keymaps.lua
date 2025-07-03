@@ -21,8 +21,3 @@ vim.keymap.set("n", "<leader>bn", "<cmd>bn<cr>", { desc = "Buffer Next" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bp<cr>", { desc = "Buffer Previous" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Buffer Delete" })
 vim.keymap.set("n", "<leader>bD", "<cmd>%bd<cr>", { desc = "Buffer Delete All" })
-
--- Registers
-vim.keymap.set({ "n", "x" }, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
-vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from system clipboard" })
-vim.keymap.set("x", "<leader>P", '"+P', { desc = "Paste from system clipboard" })
