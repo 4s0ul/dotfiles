@@ -8,7 +8,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim" },
-		opts = { automatic_enable = false, ensure_installed = { "basedpyright", "marksman" } },
+		opts = { automatic_enable = false, ensure_installed = { "lua_ls", "basedpyright", "marksman" } },
 		lazy = true,
 	},
 	{
@@ -32,6 +32,8 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 
+			lspconfig.lua_ls.setup({})
+
 			lspconfig.basedpyright.setup({
 				settings = { basedpyright = { typeCheckingMode = "standard" } },
 			})
@@ -39,7 +41,7 @@ return {
 			lspconfig.marksman.setup({})
 		end,
 		lazy = true,
-		ft = { "python", "markdown" },
+		ft = { "lua", "python", "markdown" },
 		keys = {
 			{ "gd", vim.lsp.buf.definition, desc = "LSP Go to Definition" },
 			{ "gD", vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
