@@ -2,6 +2,7 @@
 vim.o.signcolumn = "yes"
 vim.o.number = true
 vim.o.showmode = false
+vim.o.guicursor = ""
 
 -- Indentation
 vim.o.autoindent = true
