@@ -22,6 +22,7 @@ return {
 			"echasnovski/mini-git",
 			"echasnovski/mini.diff",
 		},
+		priority = 999,
 		opts = {},
 		lazy = false,
 	},

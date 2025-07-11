@@ -6,49 +6,33 @@ return {
 		keys = {
 			{
 				"<leader>ff",
-				"<cmd>Pick files<cr>",
+				function()
+					require("mini.pick").builtin.files()
+				end,
 				mode = "n",
 				desc = "Pick Files",
 			},
 			{
 				"<leader>fg",
-				"<cmd>Pick grep_live<cr>",
+				function()
+					require("mini.pick").builtin.grep_live()
+				end,
 				mode = "n",
 				desc = "Pick Text",
 			},
 			{
 				"<leader>fb",
-				"<cmd>Pick buffers include_current=false<cr>",
+				function()
+					require("mini.pick").builtin.buffers({ include_current = false })
+				end,
 				mode = "n",
 				desc = "Pick Buffers",
 			},
 			{
-				"<leader>fr",
-				'<cmd>Pick lsp scope="references"<cr>',
-				mode = "n",
-				desc = "Pick References",
-			},
-			{
-				"<leader>fs",
-				'<cmd>Pick lsp scope="document_symbol"<cr>',
-				mode = "n",
-				desc = "Pick Symbols",
-			},
-			{
-				"<leader>f'",
-				"<cmd>Pick marks<cr>",
-				mode = "n",
-				desc = "Pick marks",
-			},
-			{
-				'<leader>f"',
-				"<cmd>Pick registers<cr>",
-				mode = "n",
-				desc = "Pick registers",
-			},
-			{
 				"<leader>fp",
-				"<cmd>Pick resume<cr>",
+				function()
+					require("mini.pick").builtin.resume()
+				end,
 				mode = "n",
 				desc = "Pick Resume",
 			},
