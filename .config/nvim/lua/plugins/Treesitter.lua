@@ -12,6 +12,7 @@ return {
 				"json",
 				"yaml",
 				"dockerfile",
+                "bash",
 			},
 			sync_install = false,
 			highlight = { enable = true },
@@ -21,6 +22,6 @@ return {
 			require("nvim-treesitter.configs").setup(opts)
 		end,
 		lazy = true,
-		ft = { "c", "lua", "javascript", "html", "python", "markdown", "sql", "json", "yaml", "dockerfile" },
+		ft = { "c", "lua", "javascript", "html", "python", "markdown", "sql", "json", "yaml", "dockerfile", "sh" },
 	},
 }
