@@ -12,7 +12,7 @@ return {
 				"json",
 				"yaml",
 				"dockerfile",
-                "bash",
+				"bash",
 			},
 			sync_install = false,
 			highlight = { enable = true },
