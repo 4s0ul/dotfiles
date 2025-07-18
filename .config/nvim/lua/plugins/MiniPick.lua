@@ -23,7 +23,7 @@ return {
 			{
 				"<leader>fb",
 				function()
-					require("mini.pick").builtin.buffers({ include_current = false })
+					require("mini.pick").builtin.buffers()
 				end,
 				mode = "n",
 				desc = "Pick Buffers",
