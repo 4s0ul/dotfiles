@@ -13,13 +13,17 @@ return {
 		keys = {
 			{
 				"<leader>e",
-				":Oil --float<CR>",
+				function()
+					require("oil").open_float()
+				end,
 				mode = "n",
 				desc = "Explore files",
 			},
 			{
 				"<leader>E",
-				":Oil --float .<CR>",
+				function()
+					require("oil").open_float(".")
+				end,
 				mode = "n",
 				desc = "Explore files from cwd",
 			},
