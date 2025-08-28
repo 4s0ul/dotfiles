@@ -5,7 +5,7 @@ return {
 		---@type oil.SetupOpts
 		opts = {
 			keymaps = {
-                ["q"] = { "actions.close", mode = "n" },
+				["q"] = { "actions.close", mode = "n" },
 			},
 			float = { max_width = 0.4, max_height = 0.4 },
 		},
