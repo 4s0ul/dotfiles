@@ -7,7 +7,7 @@ return {
 			keymaps = {
 				["q"] = { "actions.close", mode = "n" },
 			},
-			float = { max_width = 0.4, max_height = 0.4 },
+			float = { max_width = 0.6, max_height = 0.6 },
 		},
 		lazy = false,
 		keys = {
