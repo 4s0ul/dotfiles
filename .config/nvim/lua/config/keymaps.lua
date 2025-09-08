@@ -2,16 +2,19 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Alternate files
+vim.keymap.set("n", "<leader><leader>", "<C-^>", { desc = "Alternate files" })
+
 -- Joining lines
-vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines" })
 
 -- Vertical navigation
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Down" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Up" })
 
 -- Searching
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "n", "nzzzv", { desc = "Search next" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Search previous" })
 
 -- Windows
 vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Window mode" })
