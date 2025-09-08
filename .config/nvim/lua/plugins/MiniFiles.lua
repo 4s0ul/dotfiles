@@ -2,13 +2,13 @@ return {
 	{
 		"echasnovski/mini.files",
 		enabled = true,
-		opts = {},
+		opts = { mappings = { go_in = '', go_out = '', go_in_plus = '<CR>', go_out_plus = '-' } },
 		lazy = false,
 		keys = {
 			{
 				"<leader>e",
 				function()
-					require("mini.files").open(vim.api.nvim_buf_get_name(0))
+					require("mini.files").open(vim.api.nvim_buf_get_name(0), false)
 				end,
 				mode = "n",
 				desc = "Explore files",
@@ -16,7 +16,7 @@ return {
 			{
 				"<leader>E",
 				function()
-					require("mini.files").open(vim.loop.cwd())
+					require("mini.files").open(vim.loop.cwd(), false)
 				end,
 				mode = "n",
 				desc = "Explore files from cwd",
