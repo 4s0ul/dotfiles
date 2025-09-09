@@ -17,6 +17,9 @@ vim.o.scrolloff = 5
 -- Clipboard
 vim.o.clipboard = "unnamedplus"
 
+-- Wildmenu
+vim.o.wildmode = "longest:full,full"
+
 -- Splits
 vim.o.splitright = true
 vim.o.splitbelow = true
