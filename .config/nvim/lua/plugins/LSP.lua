@@ -30,15 +30,10 @@ return {
 		},
 		opts = {},
 		config = function()
-			local lspconfig = require("lspconfig")
-
-			lspconfig.lua_ls.setup({})
-
-			lspconfig.basedpyright.setup({
+            vim.lsp.config("basedpyright", {
 				settings = { basedpyright = { typeCheckingMode = "standard" } },
 			})
-
-			lspconfig.marksman.setup({})
+			vim.lsp.enable({"lua_ls", "basedpyright", "marksman"})
 		end,
 		lazy = true,
 		ft = { "lua", "python", "markdown" },
