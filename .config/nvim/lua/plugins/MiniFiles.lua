@@ -2,7 +2,7 @@ return {
 	{
 		"echasnovski/mini.files",
 		enabled = true,
-		opts = { mappings = { go_in = '', go_out = '', go_in_plus = '<CR>', go_out_plus = '-' } },
+		opts = { mappings = { go_in = "", go_out = "", go_in_plus = "<CR>", go_out_plus = "-" } },
 		lazy = false,
 		keys = {
 			{
