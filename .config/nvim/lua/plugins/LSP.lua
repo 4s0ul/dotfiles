@@ -6,12 +6,6 @@ return {
 		cmd = { "Mason" },
 	},
 	{
-		"mason-org/mason-lspconfig.nvim",
-		dependencies = { "mason-org/mason.nvim" },
-		opts = { automatic_enable = false, ensure_installed = { "lua_ls", "basedpyright", "marksman" } },
-		lazy = true,
-	},
-	{
 		"echasnovski/mini.snippets",
 		opts = {},
 		lazy = true,
@@ -24,23 +18,37 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = {
-			"mason-org/mason-lspconfig.nvim",
-			"echasnovski/mini.completion",
-		},
-		opts = {},
 		config = function()
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						diagnostics = { globals = { "vim" } },
+						workspace = { checkThirdParty = false },
+						telemetry = { enable = false },
+					},
+				},
+			})
 			vim.lsp.config("basedpyright", {
 				settings = { basedpyright = { typeCheckingMode = "standard" } },
 			})
-			vim.lsp.enable({ "lua_ls", "basedpyright", "marksman" })
+			vim.lsp.config("marksman", {})
 		end,
 		lazy = true,
-		ft = { "lua", "python", "markdown" },
 		keys = {
 			{ "gd", vim.lsp.buf.definition, desc = "LSP Go to Definition" },
 			{ "gD", vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
 			{ "<leader>cd", vim.diagnostic.open_float, desc = "Line Diagnostics" },
 		},
+	},
+	{
+		"mason-org/mason-lspconfig.nvim",
+		dependencies = {
+			"mason-org/mason.nvim",
+			"neovim/nvim-lspconfig",
+			"echasnovski/mini.completion",
+		},
+		opts = { automatic_enable = true, ensure_installed = { "lua_ls", "basedpyright", "marksman" } },
+		lazy = true,
+		ft = { "lua", "python", "markdown" },
 	},
 }
