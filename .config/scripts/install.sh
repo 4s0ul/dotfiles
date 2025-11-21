@@ -48,19 +48,19 @@ DEPS=(
 
 main() {
     printf '%bSyncing and upgrading…%b\n' "$BLU" "$RST"
-    sudo pacman -Syu --noconfirm
+    sudo pacman -Syu
 
 	printf '%bInstalling dependencies...%b\n' "$BLU" "$RST"
 
 	local package
 	local errors=0
 	for package in "${DEPS[@]}"; do
-		if pacman -Qi "$package" > /dev/null; then
+        if pacman -Qi "$package" &>/dev/null; then
 			printf '[%b/%b] %s\n' "$GRN" "$RST" "$package"
 		else
 			printf '[ ] %s...\n' "$package"
 
-			if sudo pacman -S --noconfirm "$package"; then
+			if sudo pacman -S --needed --noconfirm "$package"; then
 				printf '[%b+%b] %s\n' "$GRN" "$RST" "$package"
 			else
 				printf '[%bx%b] %s\n' "$RED" "$RST" "$package"
@@ -69,12 +69,28 @@ main() {
 		fi
 	done
 
-	printf '\n%bMaking scripts executable...%b\n' "$BLU" "$RST"
-	chmod -v +x ~/.config/waybar/scripts/*.sh
+    printf '\n%bMaking scripts executable...%b\n' "$BLU" "$RST"
+    shopt -s nullglob
+    local scripts
+    scripts=( "$HOME/.config/scripts/"*.sh )
+    shopt -u nullglob
+    if ((${#scripts[@]} > 0)); then
+        chmod +x "${scripts[@]}"
+    else
+        printf 'No scripts found in ~/.config/scripts\n'
+    fi
 
-	pkill waybar
-	waybar &> /dev/null &
-	disown
+    printf '\n%bEnabling services…%b\n' "$BLU" "$RST"
+    sudo systemctl enable --now ly || true
+    sudo systemctl enable --now bluetooth || true
+    systemctl --user enable --now pipewire pipewire-alsa pipewire-pulse wireplumber || true
+
+    printf '\n%bMaking fish default shell...%b\n' "$BLU" "$RST"
+    if command -v fish >/dev/null 2>&1; then
+        chsh -s "$(command -v fish)" "$USER"
+    else
+        printf '%bFish not found in PATH, skipping default shell change.%b\n' "$RED" "$RST"
+    fi
 
 	if ((errors > 0)); then
 		printf '\nInstallation completed with %b%d errors%b\n' \
