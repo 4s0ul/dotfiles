@@ -23,6 +23,8 @@ DEPS=(
     dunst
     fuzzel
     waybar
+    grim
+    slurp
     fish
 	fzf
     tmux
