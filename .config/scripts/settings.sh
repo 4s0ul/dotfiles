@@ -10,8 +10,8 @@ choices=(
 sel="$(printf '%s\n' "${choices[@]}" | fuzzel --dmenu)"
 
 case "$sel" in
-  "Calendar")       ~/.config/waybar/scripts/calendar.sh ;;
-  "Bluetooth")       ~/.config/waybar/scripts/bluetooth.sh ;;
-  "Volume")       ~/.config/waybar/scripts/volume.sh ;;
-  "Power Menu")       ~/.config/waybar/scripts/power-menu.sh ;;
+  "Calendar")       ~/.config/scripts/calendar.sh ;;
+  "Bluetooth")       ~/.config/scripts/bluetooth.sh ;;
+  "Volume")       ~/.config/scripts/volume.sh ;;
+  "Power Menu")       ~/.config/scripts/power-menu.sh ;;
 esac
