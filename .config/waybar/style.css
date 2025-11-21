@@ -1,0 +1,214 @@
+* {
+	all: initial; /* ignore GTK theme */
+}
+
+/*--------------
+    colors
+--------------*/
+
+/* main colors */
+
+@define-color black         #000000;
+@define-color white         #ffffff;
+@define-color red           #f38ba8;
+@define-color yellow        #f9e2af;
+@define-color green         #a6e3a1;
+
+/* surface colors */
+
+@define-color main-bg       alpha(@black, 0.85);
+@define-color main-fg       @white;
+@define-color main-br       @white;
+@define-color hover-fg      alpha(@main-fg, 0.5);
+
+/* state colors */
+
+@define-color warning       @yellow;
+@define-color critical      @red;
+@define-color charging      @green;
+
+/*--------------
+    typeface
+--------------*/
+
+* {
+	font-family: "0xProto Nerd Font";
+	font-weight: bold;
+	font-size: 16px;
+	color: @main-fg;
+}
+
+tooltip label {
+	font-weight: normal;
+}
+
+/* workspaces */
+
+#workspaces button.active label {
+	font-size: 25px;
+}
+
+/* power menu */
+
+#custom-power_menu {
+	font-size: 20px;
+}
+
+/* dividers */
+
+#custom-left_div,
+#custom-right_div {
+	font-size: 20px;
+}
+
+/* tooltips */
+
+tooltip {
+	border: 3px solid @main-br;
+	background-color: @main-bg;
+}
+tooltip > box {
+	padding: 0 6px;
+}
+
+/*--------------
+    waybar
+--------------*/
+
+#waybar {
+    background: transparent;
+}
+
+#waybar > box {
+    padding: 3px;
+    background-color: @main-bg;
+    border: 3px solid @white;
+}
+
+/*-----------
+    states
+-----------*/
+
+/* hover */
+
+#clock.time:hover,
+#idle_inhibitor:hover,
+#network:hover,
+#bluetooth:hover,
+#language:hover,
+#wireplumber:hover,
+#custom-power_menu:hover {
+	color: @hover-fg;
+}
+
+/* disabled */
+
+#idle_inhibitor.deactivated,
+#wireplumber.muted {
+	color: @hover-fg;
+}
+
+/* warning */
+
+#battery.warning {
+	color: @warning;
+}
+
+/* critical */
+
+#battery.critical {
+	color: @critical;
+}
+
+/* charging */
+
+#battery.charging {
+	color: @charging;
+}
+
+/*--------------
+    modules left
+--------------*/
+
+/* workspaces */
+
+#workspaces {
+}
+#workspaces button {
+	min-width: 16px;
+	padding: 0 10px;
+}
+#workspaces button:hover {
+	background-color: @hover-bg;
+	color: @hover-fg;
+}
+#workspaces button.active label {
+	/* color: @accent; */
+}
+
+/*-----------------
+    modules center
+-----------------*/
+
+/* time */
+
+#clock.time {
+}
+
+/*----------------
+    modules right
+----------------*/
+
+/* tray */
+
+#tray {
+	padding: 0 16px;
+}
+
+/* idle inhibitor */
+
+#idle_inhibitor {
+	padding: 0 6px;
+}
+
+/* network */
+
+#network {
+	padding: 0 6px;
+}
+
+/* bluetooth */
+
+#bluetooth {
+	padding: 0 6px;
+}
+
+/* brightness */
+
+#backlight {
+	padding: 0 6px;
+}
+
+/* volume */
+
+#wireplumber {
+	padding: 0 6px;
+}
+
+/* battery */
+
+#battery {
+	padding: 0 6px;
+}
+
+/* language */
+
+#language {
+    padding: 0 16px;
+}
+
+/* power menu */
+
+#custom-power_menu {
+	padding: 0 16px 0 0px;
+}

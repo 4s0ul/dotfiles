@@ -1,20 +1,36 @@
 [global]
-font = "JettBrainsMono Nerd Font 12"
-frame_color = "#89b4fa"
-separator_color= frame
-highlight = "#89b4fa"
+font = "JetBrainsMono Nerd Font 12"
+frame_color = "#999999"
+separator_color = frame
+highlight = "#dddddd"
+padding = 8
+horizontal_padding = 10
+line_height = 0
 mouse_left_click = do_action, close_current
-mouse_middle_click = close_current
+mouse_middle_click = close_all
+mouse_right_click = close_current
+
+follow = mouse
+word_wrap = yes
+markup = full
+ignore_newline = no
+indicate_hidden = yes
+show_indicators = yes
 
 [urgency_low]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+background = "#000000D9"
+foreground = "#eeeeee"
+frame_color = "#777777"
+timeout = 4
 
 [urgency_normal]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+background = "#000000D9"
+foreground = "#eeeeee"
+frame_color = "#999999"
+timeout = 8
 
 [urgency_critical]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
-frame_color = "#fab387"
+background = "#000000D9"
+foreground = "#ffffff"
+frame_color = "#dddddd"
+timeout = 0

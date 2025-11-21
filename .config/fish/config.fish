@@ -1,5 +1,5 @@
 if status is-interactive
-    # Blank greeting
+    # Greeting
     set -U fish_greeting ""
 
     # Starship prompt
