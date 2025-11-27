@@ -95,8 +95,8 @@ tooltip > box {
 #idle_inhibitor:hover,
 #network:hover,
 #bluetooth:hover,
-#language:hover,
 #wireplumber:hover,
+#language:hover,
 #custom-power_menu:hover {
 	color: @hover-fg;
 }

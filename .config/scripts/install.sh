@@ -16,6 +16,12 @@ DEPS=(
     hyprpolkitagent
     qt5-wayland
     qt6-wayland
+    linux-firmware
+    linux-headers
+    mesa
+    intel-vulkan
+    nvidia-dkms
+    stow
     kitty
     hyprpaper
     hypridle
@@ -26,6 +32,7 @@ DEPS=(
     grim
     slurp
     fish
+    starship
 	fzf
     tmux
     neovim
@@ -41,11 +48,14 @@ DEPS=(
     bluez-utils
     bluetui
     impala
+    wiremix
+    calcurse
     btop
 	brightnessctl
     udiskie
     firefox
     wl-clipboard
+    tlp
 )
 
 main() {
@@ -85,7 +95,9 @@ main() {
     printf '\n%bEnabling services…%b\n' "$BLU" "$RST"
     sudo systemctl enable --now ly || true
     sudo systemctl enable --now bluetooth || true
-    systemctl --user enable --now pipewire pipewire-alsa pipewire-pulse wireplumber || true
+    sudo systemctl --user enable --now pipewire pipewire-alsa pipewire-pulse wireplumber || true
+    sudo systemctl enable --now tlp.service || true
+    sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket || true
 
     printf '\n%bMaking fish default shell...%b\n' "$BLU" "$RST"
     if command -v fish >/dev/null 2>&1; then
