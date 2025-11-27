@@ -1,3 +1,3 @@
 # dotfiles
 
-My important dotfiles which I track via GNU Stow
+My personal dotfiles for linux utilities
