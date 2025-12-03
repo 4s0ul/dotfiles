@@ -33,7 +33,8 @@ DEPS=(
     slurp
     fish
     starship
-	fzf
+    fzf
+    ripgrep
     tmux
     neovim
     yazi
