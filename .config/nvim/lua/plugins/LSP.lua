@@ -6,13 +6,13 @@ return {
 		cmd = { "Mason" },
 	},
 	{
-		"echasnovski/mini.snippets",
+		"nvim-mini/mini.snippets",
 		opts = {},
 		lazy = true,
 	},
 	{
-		"echasnovski/mini.completion",
-		dependencies = { "echasnovski/mini.snippets" },
+		"nvim-mini/mini.completion",
+		dependencies = { "nvim-mini/mini.snippets" },
 		opts = {},
 		lazy = true,
 	},
@@ -45,7 +45,7 @@ return {
 		dependencies = {
 			"mason-org/mason.nvim",
 			"neovim/nvim-lspconfig",
-			"echasnovski/mini.completion",
+			"nvim-mini/mini.completion",
 		},
 		opts = { automatic_enable = true, ensure_installed = { "lua_ls", "basedpyright", "marksman" } },
 		lazy = true,

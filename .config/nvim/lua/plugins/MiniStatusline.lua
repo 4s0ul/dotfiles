@@ -1,26 +1,26 @@
 return {
 	{
-		"echasnovski/mini.icons",
+		"nvim-mini/mini.icons",
 		opts = {},
 		lazy = true,
 	},
 	{
-		"echasnovski/mini-git",
+		"nvim-mini/mini-git",
 		name = "mini.git",
 		opts = {},
 		lazy = true,
 	},
 	{
-		"echasnovski/mini.diff",
+		"nvim-mini/mini.diff",
 		opts = {},
 		lazy = true,
 	},
 	{
-		"echasnovski/mini.statusline",
+		"nvim-mini/mini.statusline",
 		dependencies = {
-			"echasnovski/mini.icons",
-			"echasnovski/mini-git",
-			"echasnovski/mini.diff",
+			"nvim-mini/mini.icons",
+			"nvim-mini/mini-git",
+			"nvim-mini/mini.diff",
 		},
 		priority = 999,
 		opts = {},
