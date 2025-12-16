@@ -6,7 +6,7 @@ if status is-interactive
     starship init fish | source
 
     # FZF default bindings
-    fzf_key_bindings
+    fzf --fish | source
 
     # Nvim as default editor
     set -gx EDITOR nvim
