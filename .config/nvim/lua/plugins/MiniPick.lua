@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-mini/mini.pick",
-		opts = {},
+		opts = { window = { prompt_caret = '█' } },
 		lazy = true,
 		keys = {
 			{
