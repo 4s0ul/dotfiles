@@ -33,7 +33,6 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.completion",
 	"https://github.com/nvim-mini/mini.pairs",
 	"https://github.com/nvim-mini/mini.surround",
-	"https://github.com/nvim-mini/mini.cmdline",
 	"https://github.com/nvim-mini/mini.extra",
 	"https://github.com/nvim-mini/mini.ai",
 	"https://github.com/nvim-mini/mini.pick",
@@ -53,7 +52,6 @@ require("mini.statusline").setup()
 require("mini.completion").setup()
 require("mini.pairs").setup()
 require("mini.surround").setup()
-require("mini.cmdline").setup()
 require("mini.extra").setup()
 require("mini.ai").setup()
 require("mini.pick").setup()
@@ -62,16 +60,12 @@ require("mason").setup()
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
-		python = { "ruff_format", "ruff_organize_imports" },
-		go = { lsp_format = "prefer" },
 		markdown = { "prettier" },
-		json = { "prettier" },
-		yaml = { lsp_format = "prefer" },
 	},
 	format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
 })
 
-vim.lsp.enable({ "lua_ls", "basedpyright", "ruff", "gopls", "marksman", "yamlls" })
+vim.lsp.enable({ "lua_ls", "marksman" })
 
 -- Keymaps
 
@@ -90,9 +84,8 @@ vim.keymap.set("n", "<leader>E", "<cmd>lua MiniFiles.open(nil, false)<cr>") -- E
 
 -- Autocmds
 
--- enable treesitter
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "python", "go", "yaml", "json", "dockerfile", "bash", "sql" },
+	pattern = { "bash" },
 	callback = function()
 		vim.treesitter.start()
 	end,
