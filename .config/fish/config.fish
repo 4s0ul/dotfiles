@@ -4,23 +4,22 @@ fish_config theme choose "catppuccin-mocha"
 # Greeting
 set -g fish_greeting ""
 
-# Nvim integration
+# Neovim
 set -gx EDITOR nvim
 
-# Eza integration
-alias l="eza --icons=auto"
-alias ll="eza --long --icons=auto --group-directories-first"
-alias la="eza --long --icons=auto --all --group-directories-first"
-
 if status is-interactive
-
-    # Starship integration
+    # Starship
     starship init fish | source
 
-    # FZF integration
+    # FZF
     fzf --fish | source
 
-    # Zoxide integration
+    # Zoxide
     zoxide init fish | source
+
+    # Eza
+    alias l="eza --icons=auto"
+    alias ll="eza --long --icons=auto --group-directories-first"
+    alias la="eza --long --icons=auto --all --group-directories-first"
 
 end
