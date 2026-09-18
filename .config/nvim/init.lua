@@ -84,6 +84,7 @@ vim.keymap.set("n", "<leader>E", "<cmd>lua MiniFiles.open(nil, false)<cr>") -- E
 
 -- Autocmds
 
+-- start treesitter
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "bash" },
 	callback = function()
