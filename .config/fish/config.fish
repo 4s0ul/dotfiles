@@ -21,5 +21,4 @@ if status is-interactive
     alias l="eza --icons=auto"
     alias ll="eza --long --icons=auto --group-directories-first"
     alias la="eza --long --icons=auto --all --group-directories-first"
-
 end
